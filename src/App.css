@@ -43,6 +43,9 @@ img{
     justify-content: center;
     flex-direction: row;
 }
+.left .list-group-item > a{
+    display: block;
+}
 
 @media screen and (max-width: 600px) {
     .navbar-brand{
