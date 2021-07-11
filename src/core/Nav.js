@@ -21,7 +21,7 @@ const Nav = () => {
                             </Link>
                             <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarScrollingDropdown">
                                 {isAuthenticated() && (<li><Link to="/mycharts" className="dropdown-item fw-light"><AiOutlinePieChart className="me-1"></AiOutlinePieChart>My Charts</Link></li>)}
-                                {isAuthenticated() && isAuthenticated().user.role.name === "Admin" && (<li><Link to="/dashboard" className="dropdown-item fw-light"><RiDashboardLine className="me-1"></RiDashboardLine>Dashboard</Link></li>)}
+                                {isAuthenticated() && isAuthenticated().user.role && isAuthenticated().user.role.name === "Admin" && (<li><Link to="/dashboard" className="dropdown-item fw-light"><RiDashboardLine className="me-1"></RiDashboardLine>Dashboard</Link></li>)}
                                 {(!isAuthenticated())&&(<li><Link to="/signin" className="dropdown-item fw-light" ><AiOutlineLogin className="me-1"></AiOutlineLogin>Sign In</Link></li>)}
                                 {(!isAuthenticated())&&(<li><Link to="/signup" className="dropdown-item fw-light" ><AiOutlineLogin className="me-1"></AiOutlineLogin>Sign Up</Link></li>)}
                                 {(isAuthenticated())&&(<li><Link className="dropdown-item fw-light" onClick={()=>{

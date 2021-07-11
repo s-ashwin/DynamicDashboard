@@ -13,7 +13,7 @@ const Signin = () => {
     const [loading,setLoading] = useState(false)
 
     const redirect = (user)=>{
-        if (user && user.role.name==="Admin") {
+        if (user && user.role && user.role.name==="Admin") {
             return history.push("/dashboard")
         }
         else{
