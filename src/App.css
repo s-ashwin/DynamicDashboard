@@ -4,6 +4,9 @@ html,body{
 #root,.home{
     height: 100%;
 }
+a{
+    text-decoration: none;
+}
 .dropdown-menu{
     font-size: large;
     position: absolute!important;

@@ -10,12 +10,55 @@ export const isAuthenticated = ()=> {
     }
 }
 
+export const authenticate = (data,next) => {
+    if(typeof window !== "undefined"){
+        localStorage.setItem("jwt", JSON.stringify(data))
+        next()
+    }
+}
+
+export const signup = async(user) => {
+    try{
+        const res = await fetch(`${process.env.REACT_APP_API}/signup`,{
+                        method: "POST",
+                        headers: {
+                            Accept: "application/json",
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(user)
+        })
+        return res.json();
+    }
+    catch(err){
+        console.log(err);
+        return {error:err}
+    }
+}
+
+export const signin = async(user) => {
+    try{
+        const res = await fetch(`${process.env.REACT_APP_API}/signin`,{
+                        method: "POST",
+                        headers: {
+                            Accept: "application/json",
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(user)
+        })
+        return res.json();
+    }
+    catch(err){
+        console.log(err);
+        return {error:err}
+    }
+}
+
 export const signout = async(next) => {
     if(typeof window !== "undefined"){
         localStorage.removeItem("jwt")
         next()
 
-        return await fetch(`http://localhost:4000/api/signout`, {
+        return await fetch(`${process.env.REACT_APP_API}/signout`, {
             method: "GET"
         })
         .then(()=>(console.log("Signed Out")))
