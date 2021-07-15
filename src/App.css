@@ -46,6 +46,17 @@ img{
 .left .list-group-item > a{
     display: block;
 }
+.cat{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.cat .btn-group{
+    margin-left: auto;
+}
+.cat .btn-group .btn-warning{
+    border-radius: 0!important;
+}
 
 @media screen and (max-width: 600px) {
     .navbar-brand{

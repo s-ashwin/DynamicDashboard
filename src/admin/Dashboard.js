@@ -15,10 +15,11 @@ const Dash = ()=> {
             <div className="card">
                 <h5 className="card-header text-dark"><IoNavigateCircleOutline size={25} className="me-1 my-1"></IoNavigateCircleOutline> Navigation </h5>
                 <ul className=" left list-group">
-                    <li className="list-group-item"><Link to="/admin/create/roles">Create Roles <FaAngleRight className="float-end my-1"></FaAngleRight></Link></li>
+                    <li className="list-group-item"><Link to="/admin/create/role">Create Role <FaAngleRight className="float-end my-1"></FaAngleRight></Link></li>
+                    <li className="list-group-item"><Link to="/admin/roles">Manage Roles <FaAngleRight className="float-end my-1"></FaAngleRight></Link></li>
                     <li className="list-group-item"><Link to="/admin/users">Manage Users <FaAngleRight className="float-end my-1"></FaAngleRight></Link></li>
                     <li className="list-group-item"><Link to="/admin/charts">Manage Charts <FaAngleRight className="float-end my-1"></FaAngleRight></Link></li>
-                    <li className="list-group-item"><Link to="/admin/create/charts">Create Charts <FaAngleRight className="float-end my-1"></FaAngleRight></Link></li>
+                    <li className="list-group-item"><Link to="/admin/create/chart">Create Chart <FaAngleRight className="float-end my-1"></FaAngleRight></Link></li>
                 </ul>
             </div>
         )
