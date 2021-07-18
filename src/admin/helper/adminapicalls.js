@@ -89,3 +89,21 @@ export const deleteRole = async(userId, token, roleId) => {
         return {error:err}
     }
 }
+
+export const getUsers = async(userId, token) => {
+    try{
+        const res = await fetch(`${process.env.REACT_APP_API}/user/getall/${userId}`,{
+                        method: "GET",
+                        headers: {
+                            Accept: "application/json",
+                            "Content-Type": "application/json",
+                            Authorization: `Bearer ${token}`
+                        },
+        })
+        return res.json();
+    }
+    catch(err){
+        console.log(err);
+        return {error:err}
+    }
+}

@@ -1,5 +1,6 @@
 html,body{
-    height: 100vh;
+    height: 100%;
+    width: 100%;
 }
 #root,.home{
     height: 100%;
@@ -13,7 +14,7 @@ a{
     transform: translate(0,2.5%);
 }
 .container{
-    height: 85%;
+    min-height: 85%;
     display: flex;
     align-items: center;
     justify-content: center;

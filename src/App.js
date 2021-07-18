@@ -9,6 +9,7 @@ import CreateRole from './admin/CreateRole'
 import ManageRoles from './admin/ManageRoles'
 import UpdateRole from './admin/UpdateRole'
 import AdminRoutes from './routes/AdminRoutes';
+import ManageUsers from './admin/ManageUsers';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <AdminRoutes path="/admin/create/role" exact component={CreateRole} />
           <AdminRoutes path="/admin/roles" exact component={ManageRoles} />
           <AdminRoutes path="/admin/role/update/:roleId" exact component={UpdateRole}/>
+          <AdminRoutes path="/admin/users" exact component={ManageUsers} />
       </Switch>
     </BrowserRouter>
   );
