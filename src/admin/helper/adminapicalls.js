@@ -107,3 +107,40 @@ export const getUsers = async(userId, token) => {
         return {error:err}
     }
 }
+
+export const getUser = async(userId, token, id) => {
+    try{
+        const res = await fetch(`${process.env.REACT_APP_API}/user/get/${userId}/${id}`,{
+                        method: "GET",
+                        headers: {
+                            Accept: "application/json",
+                            "Content-Type": "application/json",
+                            Authorization: `Bearer ${token}`
+                        }
+        })
+        return res.json();
+    }
+    catch(err){
+        console.log(err);
+        return {error:err}
+    }
+}
+
+export const updateUser = async(userId, token, id, role) => {
+    try{
+        const res = await fetch(`${process.env.REACT_APP_API}/user/update/${userId}/${id}`,{
+                        method: "PUT",
+                        headers: {
+                            Accept: "application/json",
+                            "Content-Type": "application/json",
+                            Authorization: `Bearer ${token}`
+                        },
+                        body: JSON.stringify({role})
+        })
+        return res.json();
+    }
+    catch(err){
+        console.log(err);
+        return {error:err}
+    }
+}
