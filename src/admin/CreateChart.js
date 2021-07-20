@@ -28,11 +28,10 @@ const CreateChart = () => {
     }
     const handlerole = (e)=>{
         if(e.target.checked){
-            console.log(e.target.value);
             setChartrole([...chartrole,e.target.value])
         }
         else{
-            setChartrole(chartrole.filter(x => x != e.target.value))
+            setChartrole(chartrole.filter(x => x !== e.target.value))
         }
     }
 
@@ -62,7 +61,7 @@ const CreateChart = () => {
                 }
             ]
         }
-        const data = await createChart(user._id,token,{name:name,data:val,roles:chartrole})
+        const data = await createChart(user._id,token,{name:name,data:val,url:url,roles:chartrole})
         if(data.error){
             setLoading(false)
             toast.error(`${data.error}`,{hideProgressBar:true,position: toast.POSITION.TOP_CENTER, autoClose: 2000})
