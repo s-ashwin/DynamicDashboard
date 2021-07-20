@@ -11,6 +11,7 @@ import UpdateRole from './admin/UpdateRole'
 import AdminRoutes from './routes/AdminRoutes';
 import ManageUsers from './admin/ManageUsers';
 import UpdateUser from './admin/UpdateUser';
+import CreateChart from './admin/CreateChart';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <AdminRoutes path="/admin/role/update/:roleId" exact component={UpdateRole}/>
           <AdminRoutes path="/admin/users" exact component={ManageUsers} />
           <AdminRoutes path="/admin/user/update/:userId" exact component={UpdateUser}/>
+          <AdminRoutes path="/admin/create/chart" exact component={CreateChart} />
       </Switch>
     </BrowserRouter>
   );

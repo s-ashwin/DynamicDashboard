@@ -144,3 +144,35 @@ export const updateUser = async(userId, token, id, role) => {
         return {error:err}
     }
 }
+
+export const createChart = async(userId, token, chart) => {
+    try{
+        const res = await fetch(`${process.env.REACT_APP_API}/chart/create/${userId}`,{
+                        method: "POST",
+                        headers: {
+                            Accept: "application/json",
+                            "Content-Type": "application/json",
+                            Authorization: `Bearer ${token}`
+                        },
+                        body: JSON.stringify(chart)
+        })
+        return res.json();
+    }
+    catch(err){
+        console.log(err);
+        return {error:err}
+    }
+}
+
+export const getData = async(url) => {
+    try{
+        const res = await fetch(`${url}`,{
+                        method: "GET"
+        })
+        return res.json();
+    }
+    catch(err){
+        console.log(err);
+        return {error:err}
+    }
+}
