@@ -1,5 +1,7 @@
 # Dynamic Dashboard
 
+A MERN Stack application where the admin will be able to assign roles to each user who has signed up, manage and create charts with data from any API and publish them to a group of people based on their roles.
+
 Hosted at [https://dynamicdash.netlify.app/](https://dynamicdash.netlify.app/)
 
 ## Login credentials
