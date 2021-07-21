@@ -6,16 +6,13 @@ Hosted at [https://dynamicdash.netlify.app/](https://dynamicdash.netlify.app/)
 
 ### Admin
 
-- Email: admin@dynamicdash.com
-Password: dynamicdash
+- **Email:** admin@dynamicdash.com, **Password:** dynamicdash
 
 ### User
 
-- Email: user1@dynamicdash.com
-Password: dynamicdash
+- **Email:** user1@dynamicdash.com, **Password:** dynamicdash
     
-- Email: user2@dynamicdash.com
-Password: dynamicdash
+- **Email:** user2@dynamicdash.com, **Password:** dynamicdash
 
 ## API - Chart Data 
 
