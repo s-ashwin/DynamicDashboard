@@ -65,3 +65,21 @@ export const signout = async(next) => {
         .catch((err)=>(console.log(err)))
     }
 }
+
+export const getMyCharts = async(userId, token) => {
+    try{
+        const res = await fetch(`${process.env.REACT_APP_API}/chart/mycharts/${userId}`,{
+                        method: "GET",
+                        headers: {
+                            Accept: "application/json",
+                            "Content-Type": "application/json",
+                            Authorization: `Bearer ${token}`
+                        },
+        })
+        return res.json();
+    }
+    catch(err){
+        console.log(err);
+        return {error:err}
+    }
+}

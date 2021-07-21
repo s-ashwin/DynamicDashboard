@@ -14,6 +14,8 @@ import UpdateUser from './admin/UpdateUser';
 import CreateChart from './admin/CreateChart';
 import ManageCharts from './admin/ManageCharts';
 import UpdateChart from './admin/UpdateChart';
+import PrivateRoutes from './routes/PrivateRoutes';
+import MyCharts from './core/MyCharts';
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/signin" exact component={Signin} />
           <Route path="/signup" exact component={Signup} />
+          <PrivateRoutes path="/mycharts" exact component={MyCharts} />
           <AdminRoutes path="/dashboard" exact component={Dash} />
           <AdminRoutes path="/admin/create/role" exact component={CreateRole} />
           <AdminRoutes path="/admin/roles" exact component={ManageRoles} />
