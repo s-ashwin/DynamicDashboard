@@ -5,16 +5,19 @@ Hosted at [https://dynamicdash.netlify.app/](https://dynamicdash.netlify.app/)
 ## Login credentials
 
 ### Admin
-email: admin@dynamicdash.com
-password: dynamicdash
+
+- Email: admin@dynamicdash.com
+Password: dynamicdash
 
 ### User
-email: user1@dynamicdash.com
-password: dynamicdash
 
-email: user2@dynamicdash.com
-password: dynamicdash
+- Email: user1@dynamicdash.com
+Password: dynamicdash
+    
+- Email: user2@dynamicdash.com
+Password: dynamicdash
 
-## Login credentials
+## API - Chart Data 
+
 Feel free to use this api for creating a new chart from the admin account
-[https://randomarray.deta.dev/api](https://randomarray.deta.dev/api)
+[https://randomarray.deta.dev/api](https://randomarray.deta.dev/api)micdash
