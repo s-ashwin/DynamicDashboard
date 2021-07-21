@@ -38,7 +38,7 @@ const ManageUsers = () => {
         <div className="home">
             <Nav/>
             <div className="container my-4">
-                <div className="row g-2 ">
+                <div className="row g-2 w-100">
                 {goBack()}
                     {users && users.map((user, index)=>(
                          <div key={index} className="col-12 col-md-4">
