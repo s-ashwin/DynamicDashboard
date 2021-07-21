@@ -53,7 +53,7 @@ const CreateChart = () => {
         e.preventDefault()
         const chartdata = await getData(url)
         const val = {
-            labels: ['1', '2', '3', '4', '5', '6'],
+            labels: Array.from({length:chartdata.length},(val,i)=>i+1),
             datasets: [
                 {
                     label: label,
