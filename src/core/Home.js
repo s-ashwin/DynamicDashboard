@@ -11,7 +11,7 @@ export default function Home() {
                 <div className="banner">
                     <div className="text">
                         <h1 className="m-0 text-primary fw-light">Create and manage dashboards on the go</h1>
-                        <Link to="/signup" className="btn btn-lg btn-outline-primary mt-4">Get Started</Link>
+                        <Link to="/mycharts" className="btn btn-lg btn-outline-primary mt-4">Get Started</Link>
                     </div>
                     <div className="image">
                         <img alt="banner" src={img}></img>
