@@ -66,10 +66,13 @@ const UpdateChart = ({match}) => {
         e.preventDefault()
         const chartdata = await getData(url)
         const val = {
+            labels: Array.from({length:chartdata.length},(val,i)=>i+1),
             datasets: [
                 {
                     label: label,
-                    data: chartdata
+                    data: chartdata,
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgba(255, 99, 132, 0.2)',
                 }
             ]
         }

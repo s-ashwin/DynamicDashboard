@@ -57,7 +57,9 @@ const CreateChart = () => {
             datasets: [
                 {
                     label: label,
-                    data: chartdata
+                    data: chartdata,
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgba(255, 99, 132, 0.2)',
                 }
             ]
         }
