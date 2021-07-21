@@ -17,4 +17,4 @@ Hosted at [https://dynamicdash.netlify.app/](https://dynamicdash.netlify.app/)
 ## API - Chart Data 
 
 Feel free to use this api for creating a new chart from the admin account
-[https://randomarray.deta.dev/api](https://randomarray.deta.dev/api)micdash
+[https://randomarray.deta.dev/api](https://randomarray.deta.dev/api)
