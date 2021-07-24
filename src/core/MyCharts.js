@@ -12,7 +12,7 @@ const MyCharts = () => {
         const getcharts = async()=>{
             const data = await getMyCharts(user._id, token)
             if(data.error){
-                console.log("Fetch Users - Failed");
+                console.log("Fetch Charts - Failed");
             }
             else{
                 setCharts(data)
@@ -26,12 +26,14 @@ const MyCharts = () => {
             <Nav></Nav>
             <div className="container">
                 <div className="row g-3 w-100">
-                    {charts.map((chart,index)=>(
+                    {(charts.length>0)?(
+                        charts.map((chart,index)=>(
                         <div className="col-12 col-md-6 mx-auto">
                             <h6 className="fw-light text-center text-primary">{chart.name}</h6>
                             <Line key={index} data = { chart.data}/>
                         </div>
-                    ))}
+                    ))
+                    ):(<h1 className="text-center fw-light">No Charts</h1>)}
                 </div>
             </div>
         </div>
